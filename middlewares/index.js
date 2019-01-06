@@ -2,7 +2,6 @@ const bodyParser = require('body-parser'),
   helmet = require('helmet'),
   compression = require('compression'),
   passport = require('passport'),
-  morgan = require('morgan'),
   cookieSession = require('cookie-session'),
   flash = require('connect-flash'),
   debug = require('debug')('app:middlewares'),
@@ -35,6 +34,7 @@ module.exports = app => {
   app.use(passport.session());
   // Morgan
   if (app.get('env') === 'development') {
+    const morgan = require('morgan');
     app.use(morgan('dev'));
     debug('Morgan enabled...');
   }
