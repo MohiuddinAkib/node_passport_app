@@ -1,4 +1,4 @@
-const Joi = require('Joi'),
+const Joi = require('joi'),
   PasswordComplexity = require('joi-password-complexity'),
   isEmpty = require('../helpers/isEmpty'),
   UserRegisterSchema = require('./schema/user-register-schema');
