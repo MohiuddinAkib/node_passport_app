@@ -1,0 +1,91 @@
+<div class="row mt-5">
+  <div class="col-md-6 m-auto">
+    <div class="card card-body">
+      <h1 class="text-center mb-3">
+        <i class="fas fa-user-plus"></i> Register
+      </h1>
+      
+      <!-- Alerts -->
+      <%-  include('../partials/msg')  %>
+
+      <form action="/users/register" method="POST">
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input
+            type="name"
+            id="name"
+            name="name"
+            class="form-control <%= typeof errors != 'undefined' && typeof errors.name != 'undefined' ? 'is-invalid' : '' %>"
+            placeholder="Enter Name"
+            value="<%= typeof name != 'undefined' ? name : '' %>"
+          />
+
+          <!-- Invalid feedback -->
+          <% if(typeof errors !== 'undefined' && typeof errors.name !== 'undefined') { %>
+            <div class="invalid-feedback">
+              <%= errors.name %>
+            </div>
+          <% } %>
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            class="form-control <%= typeof errors != 'undefined' && typeof errors.email != 'undefined' ? 'is-invalid' : '' %>"
+            placeholder="Enter Email"
+            value="<%= typeof email != 'undefined' ? email : '' %>"
+          />
+
+          <!-- Invalid feedback -->
+          <% if(typeof errors !== 'undefined' && typeof errors.email !== 'undefined') { %>
+            <div class="invalid-feedback">
+              <%= errors.email %>
+            </div>
+          <% } %>
+        </div>
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input
+            type="password"
+            id="password"
+            name="password"
+            class="form-control <%= typeof errors != 'undefined' && typeof errors.password != 'undefined' ? 'is-invalid' : '' %>"
+            placeholder="Create Password"
+            value="<%= typeof password != 'undefined' ? password : '' %>"
+          />
+
+          <!-- Invalid feedback -->
+          <% if(typeof errors !== 'undefined' && typeof errors.password !== 'undefined') { %>
+            <div class="invalid-feedback">
+              <%= errors.password %>
+            </div>
+          <% } %>
+        </div>
+        <div class="form-group">
+          <label for="password_confirmation">Confirm Password</label>
+          <input
+            type="password"
+            id="password_confirmation"
+            name="password_confirmation"
+            class="form-control <%= typeof errors != 'undefined' && typeof errors.password_confirmation != 'undefined' ? 'is-invalid' : '' %>"
+            placeholder="Confirm Password"
+            value="<%= typeof password_confirmation != 'undefined' ? password_confirmation : '' %>"
+          />
+
+          <!-- Invalid feedback -->
+          <% if(typeof errors !== 'undefined' && typeof errors.password_confirmation !== 'undefined') { %>
+            <div class="invalid-feedback">
+              <%= errors.password_confirmation %>
+            </div>
+          <% } %>
+        </div>
+        <button type="submit" class="btn btn-primary btn-block">
+          Register
+        </button>
+      </form>
+      <p class="lead mt-4">Have An Account? <a href="/users/login">Login</a></p>
+    </div>
+  </div>
+</div>

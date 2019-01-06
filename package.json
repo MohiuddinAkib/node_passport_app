@@ -1,0 +1,40 @@
+{
+  "name": "passport_authentication",
+  "version": "1.0.0",
+  "description": "Login system with node.js and passport.js",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app",
+    "dev": "@powershell -Command $env:DEBUG='app:*'; nodemon app"
+  },
+  "keywords": [
+    "passport",
+    "login",
+    "authentication"
+  ],
+  "author": "Mohammad mohiuddin mostafa kamal akib <mohiuddinmostafakamal@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.18.3",
+    "compression": "^1.7.3",
+    "config": "^3.0.1",
+    "connect-flash": "^0.1.1",
+    "cookie-session": "^2.0.0-beta.3",
+    "debug": "^4.1.1",
+    "ejs": "^2.6.1",
+    "express": "^4.16.4",
+    "express-ejs-layouts": "^2.5.0",
+    "helmet": "^3.15.0",
+    "joi": "^14.3.1",
+    "joi-password-complexity": "^2.0.1",
+    "mongoose": "^5.4.2",
+    "mongoose-timestamp": "^0.6.0",
+    "passport": "^0.4.0",
+    "passport-local": "^1.0.0"
+  },
+  "devDependencies": {
+    "morgan": "^1.9.1",
+    "nodemon": "^1.18.9"
+  }
+}

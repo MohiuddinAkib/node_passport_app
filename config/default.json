@@ -1,0 +1,5 @@
+{
+  "secretOfSession": "MyDevSecret",
+  "MONGO_URI": "mongodb://localhost/node_passport",
+  "APP_NAME": "Node.js & Passport app"
+}

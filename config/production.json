@@ -1,0 +1,5 @@
+{
+  "secretOfSession": "MyProductionSecret",
+  "MONGO_URI": "mongodb+srv://akib:akib123@mymongocluster-cnpqw.mongodb.net/test?retryWrites=true",
+  "APP_NAME": "Node.js & Passport app"
+}
